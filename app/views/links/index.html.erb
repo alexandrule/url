@@ -1,0 +1,24 @@
+<h1>Links</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Long url</th>
+    <th>Short url</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @links.each do |link| %>
+    <tr>
+      <td><%= link_to link.long_url, link.long_url %></td>
+      <td><%= link_to link.short_url, link.short_url, target: '_blank' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New link', new_user_link_path %>
