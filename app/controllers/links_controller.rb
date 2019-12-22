@@ -20,7 +20,6 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = current_user.links.new(link_params)
-    @link.short_url = Array.new(6) { Array('a'..'z').sample }.join if @link.valid?
 
     respond_to do |format|
       if @link.save
@@ -43,6 +42,6 @@ class LinksController < ApplicationController
   # Never trust parameters from the scary internet,
   # only allow the white list through.
   def link_params
-    params.require(:link).permit(:long_url, :delete_at)
+    params.require(:link).permit(:long_url, :delete_at, :seconds)
   end
 end

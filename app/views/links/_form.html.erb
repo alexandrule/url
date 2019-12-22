@@ -21,6 +21,11 @@
     <%= form.datetime_select :delete_at, prompt: true, start_year: 2019, end_year: 2020 %>
   </div>
 
+  <div class="field">
+    <%= form.label :available_at %>
+    <%= number_field_tag :seconds, nil, name: 'link[seconds]' %> seconds
+  </div>
+
   <div class="actions">
     <%= form.submit 'Create Shorten Url' %>
   </div>
