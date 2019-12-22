@@ -12,8 +12,8 @@
   <tbody>
   <% @links.each do |link| %>
     <tr>
-      <td><%= link_to link.long_url, link.long_url %></td>
-      <td><%= link_to link.short_url, link.short_url, target: '_blank' %></td>
+      <td><%= link_to link.long_url, link.long_url, target: '_blank' %></td>
+      <td><%= link_to "#{request.base_url}/#{link.short_url}", go_path(link.short_url), target: '_blank' %></td>
     </tr>
   <% end %>
   </tbody>
