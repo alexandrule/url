@@ -16,6 +16,11 @@
     <%= form.text_field :long_url %>
   </div>
 
+  <div class="field">
+    <%= form.label :delete_at %>
+    <%= form.datetime_select :delete_at, prompt: true, start_year: 2019, end_year: 2020 %>
+  </div>
+
   <div class="actions">
     <%= form.submit 'Create Shorten Url' %>
   </div>
