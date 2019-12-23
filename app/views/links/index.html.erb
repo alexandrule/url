@@ -7,6 +7,9 @@
     <th>Short url</th>
     <th>Delete at</th>
     <th>Available At</th>
+    <th></th>
+    <th></th>
+    <th></th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -19,6 +22,8 @@
       <td><%= link.delete_at %></td>
       <td><%= link.active? ? 'now' : link.available_at %></td>
       <td><%= link_to 'Visits', user_link_visits_path(link.user, link) %></td>
+      <td><%= link_to 'Browsers', user_link_browsers_path(link.user, link) %></td>
+      <td><%= link_to 'Devices', user_link_devices_path(link.user, link) %></td>
     </tr>
   <% end %>
   </tbody>
@@ -26,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New link', new_user_link_path %>
+<%= link_to 'New link', new_user_link_path(current_user) %>
