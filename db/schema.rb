@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2019_12_22_235001) do
     t.bigint "link_id", null: false
     t.string "browser_name"
     t.string "device_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["link_id"], name: "index_visits_on_link_id"
   end
 

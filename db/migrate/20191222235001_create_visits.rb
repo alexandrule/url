@@ -4,6 +4,8 @@ class CreateVisits < ActiveRecord::Migration[6.0]
       t.references :link, null: false, foreign_key: true
       t.string :browser_name
       t.string :device_name
+
+      t.timestamps
     end
   end
 end
