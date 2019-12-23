@@ -23,7 +23,7 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to user_link_path(current_user.id, @link), notice: 'Link was successfully created.' }
+        format.html { redirect_to user_links_path(current_user.id), notice: 'Link was successfully created.' }
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new }
