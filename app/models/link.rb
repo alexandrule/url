@@ -2,7 +2,7 @@ class Link < ApplicationRecord
   attr_accessor :seconds
 
   belongs_to :user
-  has_many :visits
+  has_many :visits, dependent: :destroy
 
   validates :long_url, presence: true
 
