@@ -28,7 +28,7 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'sorcery', '~> 0.14.0'
+gem 'sorcery', '~> 0.15.0'
 # gem 'sidekiq', '~> 6.0', '>= 6.0.3'
 gem 'sidekiq', '5.2.7'
 gem 'whenever', '~> 1.0', require: false
